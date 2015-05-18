@@ -1,0 +1,6 @@
+#container { width:800px; margin-left:auto; margin-right:auto; font-family:sans-serif; }
+#left { border: solid black 1px; }
+#right { border: solid black 1px; }
+a { cursor:pointer; }
+a { padding:10px; }
+a:hover { background-color:red; }

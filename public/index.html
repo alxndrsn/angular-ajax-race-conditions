@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="angular.js"></script>
+		<script src="app.js"/></script>
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+	</head>
+	<body ng-app="megaApp">
+		<div ng-controller="ApplicationCtrl as appCtrl" id="container">
+			<h1>Mega App</h1>
+			<div ng-controller="LeftCtrl as leftCtrl" id="left">
+				<ul ng-repeat="obj in leftList">
+					<li>
+						{{obj.name}}
+						<a ng-click="select(obj)">show details</a>
+						<a ng-click="selectDeferred(obj)">defer details</a>
+					</li>
+				</ul>
+			</div>
+			<div ng-controller="RightCtrl as rightCtrl" id="right">
+				<p>Name: {{root.name}}</p>
+				<p>Details: {{root.details}}</p>
+				<a ng-click="clearSelection()">close</a>
+			</div>
+		</div>	
+	</body>
+</html>
